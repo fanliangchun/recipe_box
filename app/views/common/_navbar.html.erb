@@ -7,7 +7,11 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left">
                 <li class="active">
+                <% if user_signed_in? %>
                     <%= link_to "New Recipe", new_recipe_path %>
+                <% else %>
+                    <%= link_to "All Recipes", recipes_path %>
+                <% end %>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
